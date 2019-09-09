@@ -6,11 +6,8 @@ int main() {
     std::cin >> num;
     std::cout << '\n';
 
-    while (true) {
+    while (num != 0) {
         sum += num % 10;
-        if (num < 10) {
-            break;
-        }
         num /= 10;
     }
 
