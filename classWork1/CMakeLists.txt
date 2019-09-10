@@ -3,4 +3,4 @@ project(Hmwk)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Hmwk classWork1/displaySum.cpp)
+add_executable(Hmwk displaySum.cpp)

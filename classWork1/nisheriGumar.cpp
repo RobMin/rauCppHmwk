@@ -1,7 +1,7 @@
 #include <iostream>
 
 int main() {
-    int num = 687;
+    int num;
     int sum = 0;
     std::cin >> num;
     std::cout << '\n';
