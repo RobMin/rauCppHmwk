@@ -4,7 +4,7 @@
 
 using namespace std;
 
-double SegmentLength(const double& x1, const double& y1, const double& x2, const double& y2) {
+double SegmentLength(const double x1, const double y1, const double x2, const double y2) {
     double a = x1 - x2;
     double b = y1 - y2;
     return sqrt(a*a + b*b);

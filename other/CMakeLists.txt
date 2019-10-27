@@ -3,4 +3,4 @@ project(other)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(other backpack835.cpp)
+add_executable(other achoxNvazox.cpp)

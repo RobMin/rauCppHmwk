@@ -2,7 +2,7 @@
 
 using namespace std;
 
-bool isPalindrome(const int& n) {
+bool isPalindrome(const int n) {
     int nCop = n;
     int rev = 0;
     while (nCop > 0) {
