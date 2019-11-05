@@ -1,5 +1,6 @@
-##Just Homeworks Repo
-For learning purposes only
+### Just Homework Repo :P
 
-###Warning
-Don't submit them as your homework (^_^)
+## Warning
+For learning purposes only.
+
+Don't submit them as your homework. (^_^)
