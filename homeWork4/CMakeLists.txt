@@ -3,4 +3,4 @@ project(homeWork4)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(homeWork4 difference?.cpp)
+add_executable(homeWork4 spellChecker.cpp)
