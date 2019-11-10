@@ -3,7 +3,17 @@
 #include <utility>
 
 using namespace std;
-// es chgitem es vonca kareli sortov grel :0
+
+void asc_sort(vector<int>& veco) {
+    for (int i = 0; i < veco.size(); ++i) {
+        for (int j = 1; j < veco.size() - i; ++j) {
+            if (veco[j - 1] > veco[j]) {
+                swap(veco[j - 1], veco[j]);
+            }
+        }
+    }
+}
+
 int main() {
     int n;
     cin >> n;
@@ -15,17 +25,12 @@ int main() {
         veco.emplace_back(a);
     }
 
-    for (int a = 0; a < 2; ++a) {
-        int min = a;
-        for (int i = a + 1; i < n; ++i) {
-            if (veco[min] > veco[i]) {
-                min = i;
-            }
-        }
-        swap(veco[a == 0 ? 0 : veco.size() - 1], veco[min]);
-    }
+    asc_sort(veco);
 
-    for (int i = 0; i < n; ++i) {
+    for (int i = 0; i < n; i += 2) {
+        cout << veco[i] << " ";
+    }
+    for (int i = (n % 2 == 0 ? n - 1 : n - 2); i >= 0; i -= 2) {
         cout << veco[i] << " ";
     }
 }
