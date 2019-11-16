@@ -1,14 +1,13 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
 #include <utility>
 
 using namespace std;
 
-void asc_sort(vector<pair<int, int>>& veco) {
+void desc_sort(vector<double>& veco) {
     for (int i = 0; i < veco.size(); ++i) {
         for (int j = 1; j < veco.size() - i; ++j) {
-            if (veco[j - 1].second > veco[j].second) {
+            if (veco[j - 1] < veco[j]) {
                 swap(veco[j - 1], veco[j]);
             }
         }
@@ -16,19 +15,21 @@ void asc_sort(vector<pair<int, int>>& veco) {
 }
 
 int main() {
-    int n;
-    cin >> n;
+    int n, q;
+    cin >> n >> q;
 
-    vector<pair<int, int>> veco;
+    vector<double> veco;
     for (int i = 0; i < n; ++i) {
-        int age;
-        cin >> age;
-        veco.emplace_back(i + 1, age);
+        double a;
+        cin >> a;
+        veco.emplace_back(a);
     }
 
-    asc_sort(veco);
+    desc_sort(veco);
 
-    for (int i = 0; i < n; ++i) {
-        cout << veco[i].first << " ";
+    double sum = 0;
+    for (int i = 0; i < q; ++i) {
+        sum += veco[i];
     }
+    cout << sum;
 }
