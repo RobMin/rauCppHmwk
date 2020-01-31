@@ -4,10 +4,10 @@
 
 using namespace std;
 
-void desc_sort(vector<double>& veco) {
+void asc_sort(vector<int>& veco) {
     for (int i = 0; i < veco.size(); ++i) {
         for (int j = 1; j < veco.size() - i; ++j) {
-            if (veco[j - 1] < veco[j]) {
+            if (veco[j - 1] > veco[j]) {
                 swap(veco[j - 1], veco[j]);
             }
         }
@@ -15,21 +15,22 @@ void desc_sort(vector<double>& veco) {
 }
 
 int main() {
-    int n, q;
-    cin >> n >> q;
+    int n;
+    cin >> n;
 
-    vector<double> veco;
+    vector<int> veco;
     for (int i = 0; i < n; ++i) {
-        double a;
+        int a;
         cin >> a;
         veco.emplace_back(a);
     }
 
-    desc_sort(veco);
+    asc_sort(veco);
 
-    double sum = 0;
-    for (int i = 0; i < q; ++i) {
-        sum += veco[i];
+    for (int i = 0; i < n; i += 2) {
+        cout << veco[i] << " ";
     }
-    cout << sum;
+    for (int i = (n % 2 == 0 ? n - 1 : n - 2); i >= 0; i -= 2) {
+        cout << veco[i] << " ";
+    }
 }
